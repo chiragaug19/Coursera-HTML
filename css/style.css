@@ -8,25 +8,37 @@ body
 	font-family: sans-serif;
 }
 
-.box > h2
+h1
 {
-	text-decoration: none;
+	padding: 20px;
+}
+
+.box > div
+{
+	font-weight: bold;
+	font-size: 20px;
 	font-family: inherit;
 	float: right;
 	border-left:3px solid black;
 	border-bottom: 3px solid black;
 	padding: 5px 40px 5px 40px;
-	margin:0;
+}
+
+.box > p
+{
+	width: 90%;
 }
 
 #p1
 {
 	background-color: red;
+	color: white;
 }
 
 #p2
 {
 	background-color: blue;
+	color:orange;
 }
 
 #p3
@@ -40,7 +52,7 @@ body
 	background-color: grey;
 	border:3px solid black;
 	margin:10px;
-	padding: 0;
+	padding: 0px 0px 0px 10px;
 }
 
 /*Style in large screen*/
@@ -226,7 +238,7 @@ body
     {
         width: 58.33%;
     }
-   
+    
     .col-sm-8 
     {
         width: 66.66%;
