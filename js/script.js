@@ -9,17 +9,16 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
   });
 });
 
-(function (global) {
+(function (global) 
+{
 
 var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
-var allCategoriesUrl =
-  "https://davids-restaurant.herokuapp.com/categories.json";
+var allCategoriesUrl ="https://davids-restaurant.herokuapp.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
-var menuItemsUrl =
-  "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
+var menuItemsUrl = "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 
@@ -97,9 +96,11 @@ function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
-      var chooseRandomCategoryShortName=chooseRandomCategory(categories).short_name;
-      var homeHtmlToInsertIntoMainPage= insertProperty(homeHtml,"randomCategoryShortName","'"+chooseRandomCategoryShortName+"'");
-      insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
+
+        var chooseRandomCategoryShortName=chooseRandomCategory(categories).short_name;
+        var homeHtmlToInsertIntoMainPage= insertProperty(homeHtml,"randomCategoryShortName","'"+chooseRandomCategoryShortName+"'");
+        insertHtml("#main-content",homeHtmlToInsertIntoMainPage);
+
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
